@@ -232,7 +232,7 @@ if udB.get_key("PMSETTING"):
                 await asst.edit_message(
                     udB.get_key("LOG_CHANNEL"),
                     _not_approved[user.id],
-                    f"Incoming PM from **{mention}** [`{user.id}`] with **{wrn}/{WARNS}** warning!",
+                    f"Incoming PM from **{mention}** [`{inline_mention(user.id)}`] with **{wrn}/{WARNS}** warning!",
                     buttons=[
                         Button.inline("Approve PM", data=f"approve_{user.id}"),
                         Button.inline("Block PM", data=f"block_{user.id}"),
