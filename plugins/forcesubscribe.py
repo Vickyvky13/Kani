@@ -88,7 +88,7 @@ async def fcall(e):
     spli = match.split("_")
     user = await ultroid_bot.get_entity(int(spli[0]))
     cl = await ultroid_bot.get_entity(int(spli[1]))
-    text = f"Hi {mention}, You Need to Join"
+    text = f"Hi {inline_mention(user)}, You Need to Join"
     text += f" {cl.title} in order to Chat in this Group."
     el = (
         f"https://t.me/{cl.username}"
